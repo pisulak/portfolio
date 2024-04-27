@@ -1,0 +1,232 @@
+/* ------------------------------------ DECLARATIONS ------------------------------------*/
+
+:root {
+    color-scheme: dark light;
+
+    --width-regular: 600px;
+
+    --margin-blk-regular: 12rem;
+
+    --clr-background: hsl(253, 15, 12);
+    --clr-primary: hsl(290, 3, 64);
+    --clr-secondary: hsl(132, 29, 31);
+    --clr-highlight: hsl(300, 2, 84);
+    --clr-dark: hsl(0, 0, 12);    
+
+    --clr-font-light: hsl(140, 16, 96);
+    --clr-font-grayish: hsl(142, 10%, 47%);
+
+    --ff-poppins: "Poppins", sans-serif;
+    --ff-fira-code: "Fira Code", monospace;
+
+    --fw-light: 300;
+    --fw-regular: 400;
+    --fw-bold: 700;
+
+    --fs-200: 0.775rem;
+    --fs-400: 0.9375rem;
+    --fs-500: 1.15rem;
+    --fs-600: 1.425rem;
+    --fs-900: 1.8rem;
+}
+
+/* ------------------------------------ CSS RESET ------------------------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  ul[role='list'],
+  ol[role='list'] {
+    list-style: none;
+  }
+  
+  html:focus-within {
+    scroll-behavior: smooth;
+  }
+  
+  html,
+  body {
+    height: 100%;
+  }
+  
+  body {
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+  }
+  
+  a:not([class]) {
+    text-decoration-skip-ink: auto;
+  }
+  
+  img,
+  picture,
+  svg {
+    max-width: 100%;
+    display: block;
+  }
+  
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+     scroll-behavior: auto;
+    }
+    
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+/* ------------------------------------ HEADER ------------------------------------*/
+
+header {
+    box-shadow: 0 -15px 35px -20px rgb(215, 213, 215);
+}
+
+.wrapper {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    margin-inline: 30px;
+}
+
+.logo-box {
+    height: fit-content;
+    width: 100px;
+}
+
+.icons-box {
+    height: max-content;
+    display: flex;
+    justify-items: end;
+    align-self: center;
+}
+
+.icon-button {
+    width: 40px;
+    height: 40px;
+    margin-inline: 5px;
+    border: 2px solid;
+    border-color: var(--clr-highlight);
+    border-radius: 50%;
+}
+
+.icon-button img {
+    height: fit-content;
+    scale: 0.8;
+    cursor: pointer;
+}
+
+/* ------------------------------------ MAIN INTRODUCTION ------------------------------------*/
+
+main {
+    color: var(--clr-font-light);
+    font-family: var(--ff-poppins);
+    font-weight: var(--fw-regular);
+    font-size: var(--fs-400);
+}
+
+.introduction-container {
+    width: var(--width-regular);
+    margin-block-start: 8rem;
+    margin-block-end: var(--margin-blk-regular);
+    margin-inline: auto;
+}
+
+.my-photo-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.my-photo-box img {
+    --img-size: 200px;
+    height: var(--img-size);
+    width: var(--img-size);
+    border: 1px solid green;
+}
+
+.my-photo-box h1 {
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-900);
+    width: 100px;
+    letter-spacing: 2px;
+}
+
+.skills-container {
+    margin-block: 2rem;
+    font-family: var(--ff-fira-code);
+    font-weight: var(--fw-light);
+    letter-spacing: 0.1125rem;
+    text-align: center;
+}
+
+.skills-container span::after {
+    content: '•';
+    margin-inline: 8px;
+}
+
+.skills-container span:nth-child(1)::after,
+.skills-container span:nth-child(4)::after {
+    color: red;
+}
+.skills-container span:nth-child(2)::after,
+.skills-container span:nth-child(8)::after {
+    color: yellow;
+}
+.skills-container span:nth-child(3)::after,
+.skills-container span:nth-child(7)::after {
+    color: orangered;
+}
+.skills-container span:nth-child(5)::after {
+    color: greenyellow;
+}
+.skills-container span:nth-child(6)::after {
+    color: aqua;
+}
+.skills-container span:nth-child(9)::after {
+    content: '';
+}
+
+/* ------------------------------------ MAIN EDUCATION ------------------------------------*/
+
+.education-container {
+    width: var(--width-regular);
+    margin-block: var(--margin-blk-regular);
+    margin-inline: auto;
+    text-align: center;
+}
+
+.education-container h2 {
+    font-size: var(--fs-600);
+}
+
+.education-container h3 {
+    font-size: var(--fs-500);
+}
+
+.education-container > div {
+    margin-block: 3rem;
+}
+
+.period {
+    color: var(--clr-font-grayish);
+    font-size: var(--fs-200);
+}
+
+.period::before,
+.period::after {
+    content: ' ━━━ ';
+}

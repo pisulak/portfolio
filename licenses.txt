@@ -1,0 +1,49 @@
+MIT License
+
+Copyright (c) [year] basicons
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+Code icon by basicons (https://www.svgrepo.com/svg/379973/code-tech-dev). 
+License: MIT License
+
+----------------------------------------------------------------------------
+
+Public Domain (CC0) License
+
+Copyright: Public Domain
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this artwork, to deal in the artwork without restriction, including without
+limitation the rights to use, copy, modify, merge, publish, distribute, sublicense,
+and/or sell copies of the artwork, and to permit persons to whom the artwork is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the artwork.
+
+---
+
+Github 142 SVG Vector by bypeople (https://www.svgrepo.com/svg/512317/github-142)
+License: Public Domain (CC0)
+
+Linkedin SVG Vector by CFPB (https://www.svgrepo.com/svg/438650/linkedin)
+License: Public Domain (CC0)
