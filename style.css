@@ -1,20 +1,20 @@
 /* ------------------------------------ DECLARATIONS ------------------------------------*/
 
 :root {
-  color-scheme: dark light;
+  color-scheme: dark;
 
   --width-regular: 600px;
 
-  --margin-blk-regular: 12rem;
+  --margin-blk-regular: 14rem;
 
-  --clr-background: hsl(253, 15, 12);
-  --clr-primary: hsl(290, 3, 64);
-  --clr-secondary: hsl(132, 29, 31);
-  --clr-highlight: hsl(300, 2, 84);
-  --clr-dark: hsl(0, 0, 12);
+  --clr-background: rgb(28, 26, 35);
+  --clr-primary: rgb(165, 160, 166);
+  --clr-secondary: rgb(56, 102, 65);
+  --clr-highlight: rgb(215, 213, 215);
+  --clr-dark: rgb(31, 31, 31);
 
-  --clr-font-light: hsl(140, 16, 96);
-  --clr-font-grayish: hsl(142, 10%, 47%);
+  --clr-font-light: rgb(243, 246, 244);
+  --clr-font-grayish: rgb(108, 132, 117);
 
   --ff-poppins: "Poppins", sans-serif;
   --ff-fira-code: "Fira Code", monospace;
@@ -49,6 +49,7 @@ html:focus-within {
 html,
 body {
   height: 100%;
+  background-color: var(--clr-background);
 }
 
 body {
@@ -105,7 +106,12 @@ header {
   margin-inline: 5px;
   border: 2px solid;
   border-color: var(--clr-highlight);
+  background-color: var(--clr-background);
   border-radius: 50%;
+}
+
+.icon-button:hover {
+  filter: brightness(1.2);
 }
 
 .icon-button img {
@@ -117,7 +123,6 @@ header {
 /* ------------------------------------ MAIN INTRODUCTION ------------------------------------*/
 
 main {
-  background-color: rgb(28, 26, 35);
   color: var(--clr-font-light);
   font-family: var(--ff-poppins);
   font-weight: var(--fw-regular);
@@ -135,13 +140,16 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 1rem;
 }
 
 .my-photo-box img {
   --img-size: 200px;
   height: var(--img-size);
   width: var(--img-size);
-  border: 1px solid green;
+  border: 1px solid var(--clr-highlight);
+  border-radius: 50%;
+  padding: 0.25rem;
 }
 
 .my-photo-box h1 {
@@ -151,50 +159,8 @@ main {
   letter-spacing: 2px;
 }
 
-.about-me-btn {
-  position: relative;
-  margin-block: 2rem;
-  margin-inline: auto;
-  text-align: center;
-  width: 150px;
-  padding: 15px;
-  overflow: hidden;
-  border-radius: 0.5rem;
-}
-
-.about-me-btn::before {
-  content: "";
-  position: absolute;
-  background-color: white;
-  width: 20%;
-  height: 700%;
-  animation: btn-effect 8s linear infinite;
-}
-
-.about-me-btn::after {
-  content: "About Me";
-  padding: 13px;
-  position: absolute;
-  background: hsl(253, 15%, 12%);
-  inset: 2px;
-  border-radius: 0.5rem;
-}
-
-@keyframes btn-effect {
-  0% {
-    opacity: 1;
-    transform: translateX(50%) translateY(-40%) rotate(0deg);
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(50%) translateY(-40%) rotate(720deg);
-  }
-}
-
 .skills-container {
-  margin-block-end: 2rem;
+  margin-block: 2rem;
   font-family: var(--ff-fira-code);
   font-weight: var(--fw-light);
   letter-spacing: 0.1125rem;
@@ -264,14 +230,19 @@ main {
 .grid-gallery {
   display: grid;
   grid-template-columns: repeat(5, 80px);
-  grid-template-rows: repeat(4, 80px);
+  grid-template-rows: repeat(3, 80px);
   gap: 0.5rem;
   justify-content: center;
 }
 
-.grid-gallery img {
+.first-img-preview {
+  height: 100%;
+}
+
+.grid-gallery a {
   aspect-ratio: 1;
   object-fit: cover;
+  box-sizing: border-box;
   grid-column: span 2;
   clip-path: path(
     "M 64 16 C 80 0 80 0 96 16 C 112 32 128 48 144 64 C 160 80 160 80 144 96 C 128 112 112 128 96 144 C 80 160 80 160 64 144 C 48 128 32 112 16 96 C 0 80 0 80 16 64 Z"
@@ -283,10 +254,20 @@ main {
     clip-path: path(
       "M 0 0 C 80 0 80 0 160 0 C 160 0 160 0 160 0 C 160 80 160 80 160 160 C 160 160 160 160 160 160 C 80 160 80 160 0 160 C 0 160 0 160 0 160 C 0 80 0 80 0 0 Z"
     );
-    scale: 1.1;
+    scale: 1.05;
+
+    .first-img-preview {
+      display: none;
+    }
+
+    .second-img-preview {
+      height: 100%;
+      object-fit: cover;
+    }
   }
 
   &:nth-child(3) {
     grid-column: 2 / span 2;
+    grid-row: 2 / span 2;
   }
 }
