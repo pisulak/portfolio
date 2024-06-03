@@ -227,6 +227,14 @@ main {
 
 /* ------------------------------------ MAIN PROJECTS ------------------------------------*/
 
+.project-link {
+  position: relative;
+  transition: all 1s;
+}
+
+.project-link-show {
+}
+
 .grid-gallery {
   display: grid;
   grid-template-columns: repeat(5, 80px);
@@ -270,4 +278,16 @@ main {
     grid-column: 2 / span 2;
     grid-row: 2 / span 2;
   }
+}
+
+.education-container-item {
+  position: relative;
+  scale: 0.2;
+  filter: blur(5px);
+  transition: all 1s;
+}
+
+.education-container-item-show {
+  scale: 1;
+  filter: blur(0);
 }
