@@ -19,6 +19,7 @@
   --clr-white: rgba(255, 255, 255, 1);
   --clr-white-low-alpha: rgba(255, 255, 255, 0.8);
   --clr-glass: rgba(255, 255, 255, 0.1);
+  --clr-footer: rgb(21, 19, 26);
 
   --ff-poppins: "Poppins", sans-serif;
   --ff-fira-code: "Fira Code", monospace;
@@ -83,6 +84,8 @@ select {
 
 header {
   box-shadow: 0 -15px 35px -20px var(--clr-highlight);
+  -webkit-box-shadow: 0 -15px 35px -20px var(--clr-highlight);
+  -moz-box-shadow: 0 -15px 35px -20px var(--clr-highlight);
 }
 
 .wrapper {
@@ -280,10 +283,16 @@ main {
   clip-path: path(
     "M 64 16 C 80 0 80 0 96 16 C 112 32 128 48 144 64 C 160 80 160 80 144 96 C 128 112 112 128 96 144 C 80 160 80 160 64 144 C 48 128 32 112 16 96 C 0 80 0 80 16 64 C 32 48 48 32 64 16 Z"
   );
+  -webkit-clip-path: path(
+    "M 64 16 C 80 0 80 0 96 16 C 112 32 128 48 144 64 C 160 80 160 80 144 96 C 128 112 112 128 96 144 C 80 160 80 160 64 144 C 48 128 32 112 16 96 C 0 80 0 80 16 64 C 32 48 48 32 64 16 Z"
+  );
 
   &:hover {
     z-index: 2;
     clip-path: path(
+      "M 144 0 C 160 0 160 0 160 16 C 160 32 160 64 160 144 C 160 160 160 160 144 160 C 128 160 96 160 16 160 C 0 160 0 160 0 144 C 0 128 0 96 0 16 C 0 0 0 0 16 0 C 32 0 48 0 64 0 Z"
+    );
+    -webkit-clip-path: path(
       "M 144 0 C 160 0 160 0 160 16 C 160 32 160 64 160 144 C 160 160 160 160 144 160 C 128 160 96 160 16 160 C 0 160 0 160 0 144 C 0 128 0 96 0 16 C 0 0 0 0 16 0 C 32 0 48 0 64 0 Z"
     );
 
@@ -402,10 +411,14 @@ a.project-link-show:nth-child(4) {
 
 .button-apple-3d:active .button-overlay {
   box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
 }
 
 .button-apple-3d:active .button-text {
   transform: translate3d(0px, -5px, 0px);
+  -webkit-transform: translate3d(0px, -5px, 0px);
+  -moz-transform: translate3d(0px, -5px, 0px);
 }
 
 .button-overlay {
@@ -415,12 +428,18 @@ a.project-link-show:nth-child(4) {
   height: 100%;
   box-shadow: inset 0px -8px 0px var(--clr-dark),
     0px -8px 0px var(--clr-white-low-alpha);
+  -webkit-box-shadow: inset 0px -8px 0px var(--clr-dark),
+    0px -8px 0px var(--clr-white-low-alpha);
+  -moz-box-shadow: inset 0px -8px 0px var(--clr-dark),
+    0px -8px 0px var(--clr-white-low-alpha);
   border-radius: 1rem;
   transition: 0.13s ease-in-out;
 }
 
 .button-text {
   transform: translate3d(0px, -13px, 0px);
+  -webkit-transform: translate3d(0px, -13px, 0px);
+  -moz-transform: translate3d(0px, -13px, 0px);
   margin: 0;
   padding-top: 1rem;
   text-align: center;
@@ -462,5 +481,37 @@ a.project-link-show:nth-child(4) {
 /* ------------------------------------ FOOTER ------------------------------------*/
 
 footer {
-  margin-block-start: 5rem;
+  color: var(--clr-font-light);
+  font-family: var(--ff-poppins);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-400);
+
+  background-color: var(--clr-footer);
+  margin-block-start: 10rem;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding-inline: 5rem;
+  padding-block: 2rem;
+}
+
+.link-flexbox {
+  display: flex;
+  align-items: center;
+  width: min-content;
+}
+
+.link-flexbox > * {
+  width: max-content;
+  margin-inline-end: 2rem;
+  color: var(--clr-font-light);
+  text-decoration: none;
+  text-shadow: 2px 2px 5px var(--clr-footer);
+}
+
+.link-flexbox > *:hover {
+  text-shadow: 2px 2px 5px var(--clr-highlight);
 }
