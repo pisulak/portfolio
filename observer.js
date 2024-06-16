@@ -1,32 +1,45 @@
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    console.log(entry);
-    if (entry.isIntersecting) {
-      entry.target.classList.add("education-container-item-show");
-    } else {
-      entry.target.classList.remove("education-container-item-show");
-    }
-  });
-});
-
-const hiddenElements = document.querySelectorAll(".education-container-item");
-hiddenElements.forEach((el) => observer.observe(el));
-
-const gridObserver = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    const projectLinks = document.querySelectorAll(".project-link");
-    projectLinks.forEach((link) => {
+if (!window.matchMedia("(max-width: 850px)").matches) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      console.log(entry);
       if (entry.isIntersecting) {
-        link.classList.add("project-link-show");
-      } else {
-        link.classList.remove("project-link-show");
+        entry.target.classList.add("education-container-item-show");
       }
+      // else {
+      //   entry.target.classList.remove("education-container-item-show");
+      // }
     });
   });
-});
 
-const gridElement = document.querySelectorAll(".grid-gallery");
-gridElement.forEach((el2) => gridObserver.observe(el2));
+  const hiddenElements = document.querySelectorAll(".education-container-item");
+  hiddenElements.forEach((el) => observer.observe(el));
+
+  const gridObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      const projectLinks = document.querySelectorAll(".project-link");
+      projectLinks.forEach((link) => {
+        if (entry.isIntersecting) {
+          link.classList.add("project-link-show");
+        } else {
+          link.classList.remove("project-link-show");
+        }
+      });
+    });
+  });
+
+  const gridElement = document.querySelectorAll(".grid-gallery");
+  gridElement.forEach((el2) => gridObserver.observe(el2));
+} else {
+  const hiddenElements = document.querySelectorAll(".education-container-item");
+  const projectLink = document.querySelectorAll(".project-link");
+
+  hiddenElements.forEach((element) => {
+    element.classList.add("education-container-item-show");
+  });
+  projectLink.forEach((element) => {
+    element.classList.add("project-link-show");
+  });
+}
 
 const mailBtn = document.querySelector(".button-apple-3d");
 mailBtn.addEventListener("click", (e) => {
