@@ -57,3 +57,85 @@ mailBtn.addEventListener("click", (e) => {
     mailBtn.classList.remove("copied");
   }, 2000);
 });
+
+const cardDot = document.querySelectorAll(".card-dot");
+const pisularestLink = document.querySelector(".pisularest-link");
+const fidogastLink = document.querySelector(".fidogast-link");
+const breakoutLink = document.querySelector(".breakout-link");
+const serwiserLink = document.querySelector(".serwiser-link");
+
+pisularestLink.addEventListener("click", (e) => {
+  const pisularestCard = document.querySelector(".pisularest-card");
+  const cardBackground = document.querySelector(".card-background-1");
+  pisularestCard.classList.add("card-visible");
+  pisularestLink.classList.add("link-hidden");
+
+  cardDot.forEach((element) => {
+    element.addEventListener("click", (event) => {
+      pisularestCard.classList.remove("card-visible");
+      pisularestLink.classList.remove("link-hidden");
+    });
+  });
+
+  cardBackground.addEventListener("click", (event) => {
+    pisularestCard.classList.remove("card-visible");
+    pisularestLink.classList.remove("link-hidden");
+  });
+});
+
+fidogastLink.addEventListener("click", (e) => {
+  const fidogastCard = document.querySelector(".fidogast-card");
+  const cardBackground = document.querySelector(".card-background-2");
+  fidogastCard.classList.add("card-visible");
+  fidogastLink.classList.add("link-hidden");
+
+  cardDot.forEach((element) => {
+    element.addEventListener("click", (event) => {
+      fidogastCard.classList.remove("card-visible");
+      fidogastLink.classList.remove("link-hidden");
+    });
+  });
+
+  cardBackground.addEventListener("click", (event) => {
+    fidogastCard.classList.remove("card-visible");
+    fidogastLink.classList.remove("link-hidden");
+  });
+});
+
+breakoutLink.addEventListener("click", (e) => {
+  const breakoutCard = document.querySelector(".breakout-card");
+  const cardBackground = document.querySelector(".card-background-3");
+  breakoutCard.classList.add("card-visible");
+  breakoutLink.classList.add("link-hidden");
+
+  cardDot.forEach((element) => {
+    element.addEventListener("click", (event) => {
+      breakoutCard.classList.remove("card-visible");
+      breakoutLink.classList.remove("link-hidden");
+    });
+  });
+
+  cardBackground.addEventListener("click", (event) => {
+    breakoutCard.classList.remove("card-visible");
+    breakoutLink.classList.remove("link-hidden");
+  });
+});
+
+serwiserLink.addEventListener("click", (e) => {
+  const serwiserCard = document.querySelector(".serwiser-card");
+  const cardBackground = document.querySelector(".card-background-4");
+  serwiserCard.classList.add("card-visible");
+  serwiserLink.classList.add("link-hidden");
+
+  cardDot.forEach((element) => {
+    element.addEventListener("click", (event) => {
+      serwiserCard.classList.remove("card-visible");
+      serwiserLink.classList.remove("link-hidden");
+    });
+  });
+
+  cardBackground.addEventListener("click", (event) => {
+    serwiserCard.classList.remove("card-visible");
+    serwiserLink.classList.remove("link-hidden");
+  });
+});
