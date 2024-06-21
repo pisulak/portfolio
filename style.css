@@ -6,7 +6,7 @@
   --width-regular: 700px;
   --width-wider: 900px;
 
-  --margin-blk-regular: 30rem;
+  --margin-blk-regular: 15rem;
 
   --clr-background: rgb(91, 80, 69);
   --clr-highlight: rgb(232, 214, 198);
@@ -218,6 +218,10 @@ main {
 
 /* ------------------------------------ MAIN EDUCATION ------------------------------------*/
 
+#education {
+  padding-top: 2rem;
+}
+
 .education-container {
   width: var(--width-regular);
   margin-block: var(--margin-blk-regular);
@@ -275,9 +279,21 @@ main {
 
 /* ------------------------------------ MAIN PROJECTS ------------------------------------*/
 
+#projects {
+  padding-top: 2rem;
+}
+
 .projects-container {
+  width: var(--width-regular);
   margin-block: var(--margin-blk-regular);
+  margin-inline: auto;
   position: relative;
+}
+
+.projects-header {
+  margin-block-end: 4rem;
+  font-size: var(--fs-600);
+  font-weight: var(--fw-bold);
 }
 
 .grid-gallery {
@@ -337,22 +353,30 @@ a.project-link {
 
 a.project-link:nth-child(1) {
   transform: translateX(-200px);
-  transition-delay: 300ms;
+  &:hover {
+    transition-delay: transform 300ms;
+  }
 }
 
 a.project-link:nth-child(2) {
   transform: translateY(-200px);
-  transition-delay: 500ms;
+  &:hover {
+    transition-delay: transform 500ms;
+  }
 }
 
 a.project-link:nth-child(3) {
   transform: translateY(200px);
-  transition-delay: 700ms;
+  &:hover {
+    transition-delay: transform 700ms;
+  }
 }
 
 a.project-link:nth-child(4) {
   transform: translateX(200px);
-  transition-delay: 900ms;
+  &:hover {
+    transition-delay: transform 900ms;
+  }
 }
 
 a.project-link-show,
@@ -512,6 +536,8 @@ a.project-link-show:nth-child(4) {
   border-radius: 1rem;
   text-align: center;
   box-shadow: 5px 5px 35px var(--clr-white-low-alpha);
+  color: var(--clr-font-dark);
+  text-shadow: none;
 }
 
 .contact-container .blur-overlay {
@@ -520,9 +546,11 @@ a.project-link-show:nth-child(4) {
   height: 100%;
   width: 100%;
   transform: translateX(-5rem) translateY(-2rem);
-  background-color: var(--clr-glass);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background-image: url("images/footer-background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: hue-rotate(178deg) brightness(90%) opacity(80%);
   border-radius: 1rem;
 }
 
